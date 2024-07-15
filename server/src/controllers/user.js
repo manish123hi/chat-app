@@ -1,12 +1,15 @@
+const User = require('../models/user')
+
 
 const registerUser = (req, res) => {
-    res.send("Home");
-    console.log('home');
+    User.create(req.body)
+    res.send("created");
+
 }
 
 const loginUser = (req, res) => {
     res.send("login");
-    console.log('login');
+   
 }
 
 module.exports = {registerUser,loginUser}
